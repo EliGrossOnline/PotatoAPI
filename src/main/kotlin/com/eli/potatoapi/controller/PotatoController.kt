@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
-@RequestMapping
-@RestController("/api/potatoes")
+@RequestMapping("/api/potatoes")
+@RestController
 class PotatoController(private val potatoRepository: PotatoRepository) {
 
     @GetMapping
-    fun getAllPotatoes(): List<Potato> = potatoRepository.findAll()}
+    fun getAllPotatoes(): List<Potato> = potatoRepository.findAll()
+}
