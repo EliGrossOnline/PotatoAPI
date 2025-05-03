@@ -8,7 +8,7 @@ import jakarta.persistence.*
 data class Potato(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    val id: Int = 0,
 
     val variety: String,
     val color: String?,
